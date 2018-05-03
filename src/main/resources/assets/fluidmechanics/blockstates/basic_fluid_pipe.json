@@ -1,0 +1,43 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "up": "fluidmechanics:blocks/basic_fluid_pipe",
+      "down": "fluidmechanics:blocks/basic_fluid_pipe",
+      "north": "fluidmechanics:blocks/basic_fluid_pipe",
+      "south": "fluidmechanics:blocks/basic_fluid_pipe",
+      "east": "fluidmechanics:blocks/basic_fluid_pipe",
+      "west": "fluidmechanics:blocks/basic_fluid_pipe"
+    },
+    "model": "fluidmechanics:pipe/core",
+    "uvlock": true,
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "connect_up": {
+      "true": {},
+      "false": {}
+    },
+    "connect_down": {
+      "true": {},
+      "false": {}
+    },
+    "connect_north": {
+      "true": {},
+      "false": {}
+    },
+    "connect_south": {
+      "true": {},
+      "false": {}
+    },
+    "connect_east": {
+      "true": {},
+      "false": {}
+    },
+    "connect_west": {
+      "true": {},
+      "false": {}
+    },
+    "inventory": [{}]
+  }
+}
