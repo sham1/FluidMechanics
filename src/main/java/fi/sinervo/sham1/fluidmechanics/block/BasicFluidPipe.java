@@ -20,6 +20,16 @@ import javax.annotation.Nullable;
 
 public class BasicFluidPipe extends Block {
 
+    @Override
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
+    public boolean isFullBlock(IBlockState state) {
+        return false;
+    }
+
     public static final PropertyBool connectUp = PropertyBool.create("connect_up");
     public static final PropertyBool connectDown = PropertyBool.create("connect_down");
     public static final PropertyBool connectNorth = PropertyBool.create("connect_north");

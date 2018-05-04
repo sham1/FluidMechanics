@@ -7,37 +7,69 @@
       "north": "fluidmechanics:blocks/basic_fluid_pipe",
       "south": "fluidmechanics:blocks/basic_fluid_pipe",
       "east": "fluidmechanics:blocks/basic_fluid_pipe",
-      "west": "fluidmechanics:blocks/basic_fluid_pipe"
+      "west": "fluidmechanics:blocks/basic_fluid_pipe",
+
+      "conn_up": "fluidmechanics:blocks/basic_fluid_pipe",
+      "conn_down": "fluidmechanics:blocks/basic_fluid_pipe",
+      "conn_north": "fluidmechanics:blocks/basic_fluid_pipe",
+      "conn_south": "fluidmechanics:blocks/basic_fluid_pipe",
+      "conn_east": "fluidmechanics:blocks/basic_fluid_pipe",
+      "conn_west": "fluidmechanics:blocks/basic_fluid_pipe"
     },
     "model": "fluidmechanics:pipe/core",
     "uvlock": true,
     "transform": "forge:default-block"
   },
   "variants": {
+    "inventory": [{}],
+    "normal": [{}],
     "connect_up": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "up_connect": {"model": "fluidmechanics:pipe/connector", "x": -90}
+        }
+      },
       "false": {}
     },
     "connect_down": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "down_connect": {"model": "fluidmechanics:pipe/connector", "x": 90}
+        }
+      },
       "false": {}
     },
     "connect_north": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "north_connect": {"model": "fluidmechanics:pipe/connector"}
+        }
+      },
       "false": {}
     },
     "connect_south": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "south_connect": {"model": "fluidmechanics:pipe/connector", "y": 180}
+        }
+      },
       "false": {}
     },
     "connect_east": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "east_connect": {"model": "fluidmechanics:pipe/connector", "y": 90}
+        }
+      },
       "false": {}
     },
     "connect_west": {
-      "true": {},
+      "true": {
+        "submodel": {
+          "west_connect": {"model": "fluidmechanics:pipe/connector", "y": -90}
+        }
+      },
       "false": {}
-    },
-    "inventory": [{}]
+    }
   }
 }
