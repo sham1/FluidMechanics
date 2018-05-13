@@ -39,7 +39,7 @@ public class BasicFluidPipeTE extends TileEntity implements ITickable {
     }
 
     @Override
-    public boolean hasCapability(@Nonnull Capability<?> capability, @Nullable EnumFacing facing) {
+    public boolean hasCapability(@Nullable Capability<?> capability, @Nullable EnumFacing facing) {
         if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
             return true;
 
@@ -48,9 +48,10 @@ public class BasicFluidPipeTE extends TileEntity implements ITickable {
 
     @Nullable
     @Override
-    public <T> T getCapability(@Nonnull Capability<T> capability, @Nullable EnumFacing facing) {
+    @SuppressWarnings("unchecked")
+    public <T> T getCapability(@Nullable Capability<T> capability, @Nullable EnumFacing facing) {
         if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
-            return null;
+            return (T)tank;
 
         return super.getCapability(capability, facing);
     }
